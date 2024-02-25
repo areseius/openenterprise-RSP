@@ -1,0 +1,122 @@
+/* *FIRST-CONTRIBUTE */
+
+.first-contribute {
+  width: 100%;
+  margin-top: 200px;
+  padding: 0 56px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  justify-items: center;
+}
+
+/* *FIRST-CONTRIBUTE-CONTENT */
+.first-contribute .first-contribute-content {
+  width: 80%;
+}
+.first-contribute .first-contribute-content h1 {
+  font-family: var(--font-roboto);
+  font-weight: var(--fw-extraBold);
+  font-size: clamp(30px, 4vw, var(--fsize-large48));
+  margin-block: 24px;
+}
+.first-contribute .first-contribute-content p {
+  font-family: var(--font-roboto);
+  font-weight: var(--fw-regular);
+  font-size: var(--fsize-small18);
+  line-height: 26px;
+}
+
+/* *FIRST-CONTRIBUTE-BOX */
+.first-contribute .first-contribute-box {
+  width: clamp(319px, 100%, 484px);
+  height: 412px;
+  border-radius: 16px;
+  border: 5px solid var(--color-black);
+  background-color: var(--color-white);
+  padding-left: 35px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  animation: myBox 4s linear infinite;
+  user-select: none;
+}
+@keyframes myBox {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.first-contribute-box h1 {
+  font-family: var(--font-roboto);
+  font-weight: var(--fw-bold);
+  font-size: clamp(24px, 4vw, var(--fsize-big32));
+}
+
+.first-contribute-box .person-list-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.first-contribute-box .person-list-item figure {
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.first-contribute-box .person-list-item .person-info {
+  margin-left: 15px;
+}
+
+.first-contribute-box .person-list-item .person-info h2 {
+  font-family: var(--font-roboto);
+  font-weight: var(--fw-thin);
+  font-size: clamp(18px, 4vw, var(--fsize-medium24));
+  font-style: italic;
+  color: var(--color-black);
+}
+
+.first-contribute-box .person-list-item .person-info p {
+  font-family: var(--font-roboto);
+  font-weight: var(--fw-medium);
+  font-size: clamp(12px, 3vw, var(--fsize-small16));
+  color: var(--color-gray);
+}
+@media screen and (max-width: 1000px) {
+  .first-contribute {
+    grid-template-columns: 1fr;
+    padding: 0 33px;
+    gap: 3rem;
+    margin-top: 150px;
+  }
+  .first-contribute .first-contribute-content {
+    text-align: center;
+    width: 100%;
+  }
+  .first-contribute .first-contribute-box {
+    padding: 10px 10px;
+    height: 350px;
+    border-width: 2px;
+  }
+  .first-contribute-box .person-list-item figure {
+    transform: scale(0.9);
+  }
+  .first-contribute-box .person-list-item .person-info {
+    margin-left: 10px;
+  }
+}

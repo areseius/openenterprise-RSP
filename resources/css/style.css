@@ -1,0 +1,54 @@
+/* *IMPORT */
+@import url("sections/divider.css");
+@import url("sections/earlyaccess.css");
+@import url("sections/feature.css");
+@import url("sections/firstcontribute.css");
+@import url("sections/secondcontribute.css");
+@import url("sections/thirdcontribute.css");
+@import url("sections/header.css");
+@import url("sections/home.css");
+@import url("sections/support.css");
+@import url("sections/footer.css");
+
+/* *SETUP */
+
+:root {
+  --color-black: #303031;
+  --color-gray: #66645e;
+  --color-green: #71a894;
+  --color-light-gold: #f3f0ea;
+  --color-white: #ffffff;
+  --color-border: #e7e7e7;
+  --color-bg: #f9f9f9;
+
+  --font-roboto: "Roboto", sans-serif;
+  --font-open-sans: "Open Sans", sans-serif;
+
+  --fsize-extraLarge70: 70px;
+  --fsize-large48: 48px;
+  --fsize-big32: 32px;
+  --fsize-medium24: 24px;
+  --fsize-medium20: 20px;
+  --fsize-small18: 18px;
+  --fsize-small16: 16px;
+
+  --fw-thin: 100;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semiBold: 600;
+  --fw-bold: 700;
+  --fw-extraBold: 800;
+}
+::selection {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+html::-webkit-scrollbar {
+  background-color: var(--color-bg);
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--color-green);
+  border-radius: 20px;
+}

@@ -1,0 +1,154 @@
+/* *SUPPORT */
+
+.support {
+  width: 100%;
+  margin-top: 184px;
+  padding: 0 56px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  display: grid;
+  grid-template-areas:
+    "a"
+    "b";
+
+  justify-content: center;
+}
+
+/* *SUPPORT-CONTENT */
+
+.support .support-content {
+  grid-area: a;
+  text-align: center;
+}
+.support .support-content h1 {
+  font-family: var(--font-roboto);
+  font-weight: var(--fw-extraBold);
+  font-size: clamp(30px, 4vw, var(--fsize-large48));
+  color: var(--color-black);
+}
+.support .support-content p {
+  font-family: var(--font-roboto);
+  font-weight: var(--fw-regular);
+  font-size: var(--fsize-small18);
+  margin-block: 24px 48px;
+  line-height: 26px;
+}
+
+/* *SUPPORT-CARDS */
+
+.support .support-cards {
+  user-select: none;
+  grid-area: b;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(319px, 1fr));
+  gap: 24px;
+}
+.support .support-cards .support-card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border-radius: 16px;
+  padding: 30px 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.support .support-cards:hover .support-card:not(:hover) {
+  opacity: 0.4;
+  transform: scale(0.95);
+}
+.support-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+
+.support-cards .support-card h1 {
+  font-family: var(--font-roboto);
+  font-weight: var(--fw-bold);
+  font-size: var(--fsize-small18);
+}
+.support-cards .support-card > p {
+  font-family: var(--font-roboto);
+  font-weight: var(--fw-medium);
+  font-size: var(--fsize-small16);
+  line-height: 24px;
+  margin-block: 40px;
+}
+.support-card .support-card-footer {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.support-card .support-card-footer p {
+  font-family: var(--font-roboto);
+  font-weight: var(--fw-thin);
+  font-size: clamp(12px, 3vw, var(--fsize-small16));
+  font-style: italic;
+}
+.support-card .support-card-footer a {
+  font-family: var(--font-roboto);
+  font-weight: var(--fw-medium);
+  font-size: clamp(14px, 2vw, var(--fsize-small16));
+  color: var(--color-white);
+  background-color: var(--color-green);
+  padding: 5px 10px;
+  border-radius: 40px;
+}
+
+/* *SUPPORT-BUTTON */
+
+.support .supbutton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 40px 40px;
+}
+.support .supbutton a {
+  display: inline-block;
+  font-family: var(--font-roboto);
+  font-weight: var(--fw-bold);
+  font-size: clamp(16px, 2vw, var(--fsize-small18));
+  color: var(--color-white);
+  background-color: var(--color-black);
+  padding: 15px 20px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.2s;
+}
+
+.supbutton a::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  width: 0;
+  height: 0;
+  background-color: white;
+  border-radius: 8px;
+  transition: all 0.4s;
+  border: 2px solid black;
+  scale: 0;
+  z-index: -1;
+}
+.supbutton a:hover::before {
+  scale: 1;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+}
+.supbutton a:hover {
+  color: black !important;
+}
+@media screen and (max-width: 1000px) {
+  .support {
+    padding: 0 30px;
+    margin-top: 100px;
+  }
+  .support .support-cards .support-card {
+    padding: 20px 20px;
+  }
+}

@@ -1,0 +1,12 @@
+/* *DIVIDER */
+.divider {
+  height: 72px;
+  width: 100%;
+  background-image: url("/resources/images/divider-part.svg");
+  margin-bottom: 44px;
+}
+@media only screen and (max-width: 1000px) {
+  .divider {
+    height: 50px;
+  }
+}

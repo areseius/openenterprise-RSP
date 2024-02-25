@@ -1,0 +1,97 @@
+/* *FOOTER */
+
+.footer {
+  width: 100%;
+  margin-block: 130px 56px;
+  padding: 0 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer > a {
+  font-family: var(--font-open-sans);
+  font-weight: var(--fw-bold);
+  font-size: clamp(28px, 3vw, 40px);
+  color: var(--color-black);
+  user-select: none;
+}
+.footer .footer-links {
+  user-select: none;
+}
+.footer .footer-links a {
+  font-family: var(--font-roboto);
+  font-weight: var(--fw-medium);
+  font-size: clamp(14px, 3vw, var(--fsize-medium20));
+  color: var(--color-black);
+  position: relative;
+  z-index: 2;
+  transition: all 0.5s;
+  padding: 0 10px;
+}
+
+.footer .footer-links a::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  position: absolute;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  transform: scaleY(3);
+  transition: all 0.8s;
+  opacity: 0;
+  z-index: -1;
+}
+.footer .footer-links a::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  position: absolute;
+  background-color: var(--color-green);
+  transform: scaleY(0);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.footer .footer-links a:hover {
+  color: white !important;
+}
+.footer .footer-links a:hover::before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+.footer .footer-links a:hover::after {
+  transform: scaleY(2);
+  opacity: 1;
+}
+.footer .footer-links a:last-child {
+  font-weight: var(--fw-bold);
+  color: var(--color-green);
+}
+
+.footer .footer-links a:not(:last-child) {
+  margin-right: 40px;
+}
+@media screen and (max-width: 1000px) {
+  .footer {
+    border-top: 2px solid var(--color-border);
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    margin-block: 50px 26px;
+    padding-top: 20px;
+  }
+  .footer .footer-links {
+    gap: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer .footer-links a:not(:last-child) {
+    margin-right: 0;
+  }
+}
