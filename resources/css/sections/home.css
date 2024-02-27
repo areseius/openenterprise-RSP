@@ -61,7 +61,7 @@
   .home {
     grid-template-columns: 1fr;
     padding-inline: 33px;
-
+    height: calc(100dvh - 80px);
     gap: 3rem;
   }
   .home .home-image {
